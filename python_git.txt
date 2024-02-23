@@ -1,0 +1,19 @@
+s = 'xyzxyzxyzabcabcd'
+dct = {}
+
+for i in range(len(s)):
+    val = s[i]
+    
+    if val not in dct.keys():
+        dct[val] = [i]
+        
+    else:
+        dct[val].append(i)
+
+# For printing
+
+for k in dct.keys():
+    if len(dct[k]) == 1:
+        print(k, ':', -1)
+    else:
+        print(k, ':', dct[k])
